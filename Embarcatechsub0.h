@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-int main(){}
+
 void temperaturaCelsiusKelvin(){
     float celsius, kelvin;
     printf("Digite a temperatura em celsius.\n");
