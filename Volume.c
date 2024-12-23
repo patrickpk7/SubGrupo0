@@ -64,4 +64,6 @@ void convert_volume(float volume, char from_unit, char to_unit) {
             printf("Unidade de destino inválida.\n");
             return;
     }
-
+    // Exibir o resultado
+    printf("\nResultado: %.6f %c\n", converted_volume, to_unit);
+}
