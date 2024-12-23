@@ -50,3 +50,18 @@ void convert_volume(float volume, char from_unit, char to_unit) {
             printf("Unidade de origem inválida.\n");
             return;
     }
+ // Conversão de litros para a unidade de destino
+    switch (to_unit) {
+        case 'L': // Litros
+            break;
+        case 'M': // Mililitros
+            converted_volume *= 1000.0;
+            break;
+        case 'C': // Metros cúbicos
+            converted_volume /= 1000.0;
+            break;
+        default:
+            printf("Unidade de destino inválida.\n");
+            return;
+    }
+
