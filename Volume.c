@@ -31,3 +31,22 @@ int main() {
 
     return 0;
 }
+/ Função de conversão de volume
+void convert_volume(float volume, char from_unit, char to_unit) {
+    float converted_volume = 0;
+
+    // Conversão para litros como unidade intermediária
+    switch (from_unit) {
+        case 'L': // Litros
+            converted_volume = volume;
+            break;
+        case 'M': // Mililitros
+            converted_volume = volume / 1000.0;
+            break;
+        case 'C': // Metros cúbicos
+            converted_volume = volume * 1000.0;
+            break;
+        default:
+            printf("Unidade de origem inválida.\n");
+            return;
+    }
