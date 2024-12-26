@@ -48,7 +48,7 @@ void conversorToneladaGrama(){
     printf("O valor eh: %.2f\n", grama);
 }
 
-int main(){
+void menuMassas(){
     int menu;
     printf("Digite 1 para converter de kg para g ou 2 para converter de g para kg, digite 3 para converter kg para t ou 4 de t para kg, digite 5 para converter de g para t ou 6 de t para g: ");
     scanf("%d", &menu);
@@ -76,5 +76,5 @@ int main(){
             printf("Opcao invalida\n");
             break;
     }
-    return 0;
+    
 }

@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "Comprimento.h"
 #include "Velocidade.h"
+#include "Massas.h"
 
 
 int main(){
@@ -23,6 +24,9 @@ int main(){
                 break;
             case 2:
                 funcaovelocidade();
+                break;
+            case 3:
+                menuMassas();
                 break;
             case 0:
                 printf("Saindo...\n");
