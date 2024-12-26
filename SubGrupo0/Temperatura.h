@@ -1,4 +1,4 @@
-
+#include <stdio.h>
 
 
 void temperaturaCelsiusKelvin(){
@@ -45,5 +45,35 @@ void temperaturaFahrenheitKelvin(){
 
 }
 
+void menuTemperatura() {
+    int menu;
+    printf("Digite 1 para converter de celsius para kelvin \n 2 para converter de kelvin para celsius \n digite 3 para converter celsius para fahrenheit \n 4 de fahrenheit para celsius \n digite 5 para converter de kelvin para fahrenheit \n 6 de fahrenheit para kelvin: \n ");
+    scanf("%d", &menu);
+
+    switch (menu)
+    {
+    case 1:
+        temperaturaCelsiusKelvin();
+        break;
+    case 2:
+        temperaturaKelvinCelsius();
+        break;
+    case 3:
+        temperaturaCelsiusFahrenheit();
+        break;
+    case 4:
+        temperaturaFahrenheitCelsius();
+        break;
+    case 5:
+        temperaturaKelvinFahrenheit();
+        break;
+    case 6:
+        temperaturaFahrenheitKelvin();
+        break;
+    default:
+        printf("Opção inválida!\n");
+        break;
+    }
+}
 
 
