@@ -30,7 +30,7 @@ void temperaturaFahrenheitCelsius(){
      printf("A temperatura em celsius fica %.2f celsius!\n", celsius);
 }
 void temperaturaKelvinFahrenheit(){
-    float kelvin, fahrenheit;
+    double kelvin, fahrenheit;
     printf("Digite a temperatura em kelvin.\n");
     scanf("%f", &kelvin);
     fahrenheit = (kelvin - 273.15) * 1.8 + 32;  
