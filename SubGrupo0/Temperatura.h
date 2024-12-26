@@ -47,7 +47,12 @@ void temperaturaFahrenheitKelvin(){
 
 void menuTemperatura() {
     int menu;
-    printf("Digite 1 para converter de celsius para kelvin \n 2 para converter de kelvin para celsius \n digite 3 para converter celsius para fahrenheit \n 4 de fahrenheit para celsius \n digite 5 para converter de kelvin para fahrenheit \n 6 de fahrenheit para kelvin: \n ");
+    printf("Digite 1 para converter de Celsius para Kelvin \n");
+    printf("Digite 2 para converter de Kelvin para Celsius \n");
+    printf("Digite 3 para converter de Celsius para Fahrenheit \n");
+    printf("Digite 4 para converter de Fahrenheit para Celsius \n"); 
+    printf("Digite 5 para converter de Kelvin para Fahrenheit \n"); 
+    printf("Digite 6 para converter de Fahrenheit para Kelvin: \n ");
     scanf("%d", &menu);
 
     switch (menu)

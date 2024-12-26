@@ -4,6 +4,7 @@
 #include "Velocidade.h"
 #include "Massas.h"
 #include "Tempo.h"
+#include "Temperatura.h"
 
 int main(){
     system("chcp 65001>nul");
@@ -29,7 +30,7 @@ int main(){
                 menuMassas();
                 break;
             case 4:
-                
+                menuTemperatura();
                 break;
             case 5:
                 converterTempo();
