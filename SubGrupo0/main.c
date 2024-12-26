@@ -3,7 +3,7 @@
 #include "Comprimento.h"
 #include "Velocidade.h"
 #include "Massas.h"
-
+#include "Tempo.h"
 
 int main(){
     system("chcp 65001>nul");
@@ -27,6 +27,12 @@ int main(){
                 break;
             case 3:
                 menuMassas();
+                break;
+            case 4:
+                
+                break;
+            case 5:
+                converterTempo();
                 break;
             case 0:
                 printf("Saindo...\n");
