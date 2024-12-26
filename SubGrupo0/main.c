@@ -1,37 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "Embarcatechsub0.h"
+#include "Comprimento.h"
+#include "Velocidade.h"
+
 
 int main(){
+    system("chcp 65001>nul");
     int opcao;
     do{
         printf("Escolha uma opcao:\n");
-        printf("1 - Converter de Celsius para Kelvin\n");
-        printf("2 - Converter de Kelvin para Celsius\n");
-        printf("3 - Converter de Celsius para Fahrenheit\n");
-        printf("4 - Converter de Fahrenheit para Celsius\n");
-        printf("5 - Converter de Kelvin para Fahrenheit\n");
-        printf("6 - Converter de Fahrenheit para Kelvin\n");
+        printf("1 - Conversor de Comprimentos: \n");
+        printf("2 - Conversor de Velocidades: \n");
+        printf("3 - Conversor de Massas: \n");
+        printf("4 - Conversor de Temperaturas: \n");
+        printf("5 - Conversor de Tempo: \n");
+        printf("6 - Conversor de Volumes: \n");
         printf("0 - Sair\n");
         scanf("%d", &opcao);
         switch(opcao){
             case 1:
-                temperaturaCelsiusKelvin();
+                menuConversorMedidas();
                 break;
             case 2:
-                temperaturaKelvinCelsius();
-                break;
-            case 3:
-                temperaturaCelsiusFahrenheit();
-                break;
-            case 4:
-                temperaturaFahrenheitCelsius();
-                break;
-            case 5:
-                temperaturaKelvinFahrenheit();
-                break;
-            case 6:
-                temperaturaFahrenheitKelvin();
+                funcaovelocidade();
                 break;
             case 0:
                 printf("Saindo...\n");
