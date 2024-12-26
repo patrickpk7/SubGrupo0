@@ -4,6 +4,8 @@
 #include "Velocidade.h"
 #include "Massas.h"
 #include "Tempo.h"
+#include "Temperatura.h"
+#include "Volume.h"
 
 int main(){
     system("chcp 65001>nul");

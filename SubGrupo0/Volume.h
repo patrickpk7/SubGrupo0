@@ -5,7 +5,7 @@ void convert_volume(float volume, char from_unit, char to_unit);
 
 void funcaoPrincipal() {
     
-    system("chcp 65001>nul");
+    
     
     float volume;
     char from_unit, to_unit;
@@ -17,7 +17,7 @@ void funcaoPrincipal() {
     printf("C - Metros cúbicos\n");
 
     // Entrada do volume e das unidades
-    printf("\nDigite o volume a ser convertido: ");
+    printf("\nDigite o valor a ser convertido: ");
     scanf("%f", &volume);
 
     printf("Digite a unidade de origem (L/M/C):\n");
@@ -65,5 +65,5 @@ void convert_volume(float volume, char from_unit, char to_unit) {
             return;
     }
     // Exibir o resultado
-    printf("\nResultado: %.6f %c\n", converted_volume, to_unit);
+    printf("\nResultado: %.3f %c\n", converted_volume, to_unit);
 }
