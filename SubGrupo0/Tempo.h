@@ -18,7 +18,34 @@ void converterTempo() {
         scanf("%lf", &valor); // Lê o valor do usuário
 
         if (valor >= 0) { // Verifica se o valor é positivo
-            converterTempo(escolha, valor); // Chama a função para realizar a conversão
+            // converterTempo(escolha, valor); // Chama a função para realizar a conversão
+             switch(escolha) { // verifica qual unidade foi escolhida 
+
+                case 1: // Caso 1: unidade escolhida é segundos 
+                    segundos = valor; 
+                    minutos = valor / 60.0;
+                    horas = valor / 3600.0;
+                    printf("%.2f segundos equivalem a %.2f minutos e %.2f horas.\n", segundos, minutos, horas);
+                    break;
+
+                case 2: // Caso 2: unidade escolhida é minutos
+                    segundos = valor * 60.0;
+                    minutos = valor;
+                    horas = valor / 60.0;
+                    printf("%.2f minutos equivalem a %.2f segundos e %.2f horas.\n", minutos, segundos, horas);
+                    break;
+
+                case 3: // Caso 3: unidade escolhida é horas 
+                    segundos = valor * 3600.0;
+                    minutos = valor * 60.0;
+                    horas = valor;
+                    printf("%.2f horas equivalem a %.2f minutos e %.2f segundos.\n", horas, minutos, segundos);
+                    break;
+
+                default: // escolha inválida
+                    printf("Escolha inválida. Tente novamente.\n");
+                    break;
+                }
         } else { // Caso o valor seja negativo
             printf("O valor deve ser positivo.\n"); // Exibe mensagem de erro
         }
@@ -26,32 +53,32 @@ void converterTempo() {
         printf("Escolha inválida.\n"); // Exibe mensagem de erro
     }
 
-    switch(escolha) { // verifica qual unidade foi escolhida 
+    // switch(escolha) { // verifica qual unidade foi escolhida 
 
-        case 1: // Caso 1: unidade escolhida é segundos 
-            segundos = valor; 
-            minutos = valor / 60.0;
-            horas = valor / 3600.0;
-            printf("%.2f segundos equivalem a %.2f minutos e %.2f horas.\n", segundos, minutos, horas);
-            break;
+    //     case 1: // Caso 1: unidade escolhida é segundos 
+    //         segundos = valor; 
+    //         minutos = valor / 60.0;
+    //         horas = valor / 3600.0;
+    //         printf("%.2f segundos equivalem a %.2f minutos e %.2f horas.\n", segundos, minutos, horas);
+    //         break;
 
-        case 2: // Caso 2: unidade escolhida é minutos
-            segundos = valor * 60.0;
-            minutos = valor;
-            horas = valor / 60.0;
-            printf("%.2f minutos equivalem a %.2f segundos e %.2f horas.\n", minutos, segundos, horas);
-            break;
+    //     case 2: // Caso 2: unidade escolhida é minutos
+    //         segundos = valor * 60.0;
+    //         minutos = valor;
+    //         horas = valor / 60.0;
+    //         printf("%.2f minutos equivalem a %.2f segundos e %.2f horas.\n", minutos, segundos, horas);
+    //         break;
 
-        case 3: // Caso 3: unidade escolhida é horas 
-            segundos = valor * 3600.0;
-            minutos = valor * 60.0;
-            horas = valor;
-            printf("%.2f horas equivalem a %.2f minutos e %.2f segundos.\n", horas, minutos, segundos);
-            break;
+    //     case 3: // Caso 3: unidade escolhida é horas 
+    //         segundos = valor * 3600.0;
+    //         minutos = valor * 60.0;
+    //         horas = valor;
+    //         printf("%.2f horas equivalem a %.2f minutos e %.2f segundos.\n", horas, minutos, segundos);
+    //         break;
 
-        default: // escolha inválida
-            printf("Escolha inválida. Tente novamente.\n");
-    }
+    //     default: // escolha inválida
+    //         printf("Escolha inválida. Tente novamente.\n");
+    // }
 
 }
 

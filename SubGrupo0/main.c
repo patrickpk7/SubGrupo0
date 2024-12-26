@@ -18,6 +18,7 @@ int main(){
         printf("5 - Conversor de Tempo: \n");
         printf("6 - Conversor de Volumes: \n");
         printf("0 - Sair\n");
+        printf("-->>>");
         scanf("%d", &opcao);
         switch(opcao){
             case 1:
