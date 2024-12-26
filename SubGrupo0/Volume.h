@@ -3,7 +3,7 @@
 // Protótipo das funções
 void convert_volume(float volume, char from_unit, char to_unit);
 
-int main() {
+void funcaoPrincipal() {
     
     system("chcp 65001>nul");
     
@@ -20,7 +20,7 @@ int main() {
     printf("\nDigite o volume a ser convertido: ");
     scanf("%f", &volume);
 
-    printf("Digite a unidade de origem (L/M/C): ");
+    printf("Digite a unidade de origem (L/M/C):\n");
     scanf(" %c", &from_unit);
 
     printf("Digite a unidade de destino (L/M/C): ");
@@ -29,9 +29,9 @@ int main() {
     // Chamada da função de conversão
     convert_volume(volume, from_unit, to_unit);
 
-    return 0;
+    //return 0;
 }
-/ Função de conversão de volume
+// Função de conversão de volume
 void convert_volume(float volume, char from_unit, char to_unit) {
     float converted_volume = 0;
 
