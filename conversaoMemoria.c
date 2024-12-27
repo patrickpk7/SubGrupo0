@@ -1,8 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
-#include <math.h>
-
 void conversaoMemoria() //Módulo de conversão de memória
 {
     setlocale(LC_ALL, "Portuguese");
@@ -160,11 +155,4 @@ void conversaoMemoria() //Módulo de conversão de memória
             }
         }
     }while((pergunta < 1)||(pergunta > 3));
-}
-
-int main()
-{
-    conversaoMemoria();
-
-    return 0;
 }
