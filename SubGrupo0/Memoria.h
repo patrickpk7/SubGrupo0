@@ -3,15 +3,16 @@
 #include <locale.h>
 #include <math.h>
 
-void conversaoMemoria() //Módulo de conversão de memória
+void bitsBits(); //Módulo de conversão de bits para bits
+void bytesBytes(); //Módulo de conversão de bytes para bytes
+void bitsBytes(); //Módulo de conversão de bits para bytes
+
+void bitsBits() //Módulo de conversão de memória
 {
-    setlocale(LC_ALL, "Portuguese");
+    
     
     int pergunta;
     double pergunta2;
-    
-    void bitsBits() //Módulo de conversão de bits para bits
-    {
         printf("\nQuantos bits você deseja converter? ");
         scanf("%lf", &pergunta2);
         if(pergunta2 <= 999)
@@ -33,16 +34,16 @@ void conversaoMemoria() //Módulo de conversão de memória
         {
             printf("%0.1f Petabits = %0.0f Terabits", pergunta2/1000000000000000, pergunta2/1000000000000000*1000);
         }
-        printf("\n\nDeseja retornar ao Menu de Conversão? ");
-        printf("\n1. Retornar ao Menu de Conversão");
-        printf("\n2. Encerrar");
-        printf("\nInsira o número da alternativa desejada: ");
+        printf("\n\n Deseja retornar ao Menu de Conversão? ");
+        printf("\n 1. Retornar ao Menu de Conversão");
+        printf("\n 2. Encerrar");
+        printf("\n Insira o número da alternativa desejada: ");
         scanf("%i", &pergunta);
         
         if(pergunta == 1)
         {
             printf("\n");
-            conversaoMemoria();
+            bitsBits();
         }else
         {
             printf("\nPrograma encerrado.");
@@ -51,6 +52,8 @@ void conversaoMemoria() //Módulo de conversão de memória
     
     void bytesBytes() //Módulo de conversão de bytes para bytes
     {
+        int pergunta;
+        double pergunta2;
         printf("\nQuantos bytes você deseja converter? ");
         scanf("%lf", &pergunta2);
         if(pergunta2 <= 999)
@@ -82,7 +85,7 @@ void conversaoMemoria() //Módulo de conversão de memória
         if(pergunta == 1)
         {
             printf("\n");
-            conversaoMemoria();
+            bitsBits();
         }else
         {
             printf("\nPrograma encerrado.");
@@ -91,6 +94,8 @@ void conversaoMemoria() //Módulo de conversão de memória
     
     void bitsBytes() //Módulo de conversão de bits para bytes
     {
+        int pergunta;
+        double pergunta2;
         printf("\nQuantos Bits você deseja converter para Bytes? ");
         scanf("%lf", &pergunta2);
         if(pergunta2 <= 999)
@@ -119,52 +124,33 @@ void conversaoMemoria() //Módulo de conversão de memória
         if(pergunta == 1)
         {
             printf("\n");
-            conversaoMemoria();
+            bitsBits();
         }else
         {
             printf("\nPrograma encerrado.");
         }
     }
     
-    do
-    {
+    void menuMemoria(){ //Menu de conversão de memória
+        int pergunta;
         printf("Seja bem-vindo a conversão de Memória\n");
         printf("1. Conversão de Bits até Petabits\n");
         printf("2. Conversão de Bytes até Petabytes\n");
         printf("3. Conversão de Bits para Bytes\n");
         printf("Insira o número da alternativa desejada: ");
-        scanf("%i", &pergunta);
+        scanf("%d", &pergunta);
         switch(pergunta)
         {
             case 1:
-            {
                 bitsBits();
-            }
-            break;
-            
+                break;
             case 2:
-            {
                 bytesBytes();
-            }
-            break;
-            
+                break;
             case 3:
-            {
                 bitsBytes();
-            }
-            break;
-            
+                break;
             default:
-            {
-                printf("\nInsira uma opção válida, tente novamente.\n\n");
-            }
+                printf("Opção inválida!\n");
         }
-    }while((pergunta < 1)||(pergunta > 3));
-}
-
-int main()
-{
-    conversaoMemoria();
-
-    return 0;
-}
+    }

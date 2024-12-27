@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
+#include <math.h>
 #include "Comprimento.h"
 #include "Velocidade.h"
 #include "Massas.h"
@@ -7,6 +9,7 @@
 #include "Temperatura.h"
 #include "Volume.h"
 #include "Energia.h"
+#include "Memoria.h"
 
 
 int main(){
@@ -21,6 +24,7 @@ int main(){
         printf("5 - Conversor de Tempo: \n");
         printf("6 - Conversor de Volumes: \n");
         printf("7 - Conversor de Energia: \n");
+        printf("8 - Conversor de Memória: \n");
         printf("0 - Sair\n");
         printf("-->>>");
         scanf("%d", &opcao);
@@ -45,6 +49,9 @@ int main(){
                 break;
             case 7:
                 menuEnergia();
+                break;
+            case 8:
+                menuMemoria();
                 break;
             case 0:
                 printf("Saindo...\n");
