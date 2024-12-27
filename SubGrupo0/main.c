@@ -6,6 +6,8 @@
 #include "Tempo.h"
 #include "Temperatura.h"
 #include "Volume.h"
+#include "Energia.h"
+
 
 int main(){
     system("chcp 65001>nul");
@@ -18,6 +20,7 @@ int main(){
         printf("4 - Conversor de Temperaturas: \n");
         printf("5 - Conversor de Tempo: \n");
         printf("6 - Conversor de Volumes: \n");
+        printf("7 - Conversor de Energia: \n");
         printf("0 - Sair\n");
         printf("-->>>");
         scanf("%d", &opcao);
@@ -39,6 +42,9 @@ int main(){
                 break;
             case 6:
                 funcaoVolume();
+                break;
+            case 7:
+                menuEnergia();
                 break;
             case 0:
                 printf("Saindo...\n");

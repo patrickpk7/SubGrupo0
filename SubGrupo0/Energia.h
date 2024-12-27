@@ -28,7 +28,7 @@ double calorias_para_kwh(double energia) {
     return energia * 1.1622e-6;
 }
 
-int main() {
+void menuEnergia() {
     int opcao; // Vai guardar o que o usuário escolher
     double energia, resultado; // Variáveis para entrada e resultado
 
@@ -45,7 +45,7 @@ int main() {
     if (opcao < 1 || opcao > 3) {
         // Se digitou errado, já encerra o programa
         printf("Opção inválida! Tente de novo mais tarde.\n");
-        return 1;
+        
     }
 
     // Pede o valor da energia para converter
@@ -77,5 +77,5 @@ int main() {
 printf("Pressione Enter para sair...");
 getchar(); // Para capturar o "Enter"
 getchar(); // Para consumir o buffer do scanf
-    return 0; // Tudo deu certo
+    
 }
