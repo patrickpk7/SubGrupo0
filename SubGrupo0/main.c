@@ -38,7 +38,7 @@ int main(){
                 converterTempo();
                 break;
             case 6:
-                funcaoPrincipal();
+                funcaoVolume();
                 break;
             case 0:
                 printf("Saindo...\n");
